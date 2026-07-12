@@ -202,6 +202,17 @@
 
 <body>
 
+  <!-- ===== PAGE LOADER ===== -->
+  <div class="page-loader" id="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <span class="loader-initials">MBF</span>
+    </div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar-fill"></div>
+    </div>
+  </div>
+
   <!-- ===== HEADER ===== -->
   <header class="header" id="header">
     <nav class="nav container">
@@ -327,7 +338,7 @@
               </mask>
               <g mask="url(#mask0)">
                 <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" fill="var(--clr-primary)"/>
-                <image class="home-blob-img" x="10" y="0" width="180" href="Assets/Icons/profile.jpg"/>
+                <image class="home-blob-img" x="10" y="0" width="180" href="Assets/Icons/profile-hero.png"/>
               </g>
             </svg>
           </div>
@@ -726,7 +737,7 @@
 
           <!-- Project 1: Playwright Framework -->
           <div class="portfolio-content grid swiper-slide">
-            <img src="Assets/project/playwright_fw.png" alt="Playwright Test Automation Framework" class="portfolio-img"
+            <img loading="lazy" src="Assets/project/playwright_fw.png" alt="Playwright Test Automation Framework" class="portfolio-img"
                  onerror="this.style.background='linear-gradient(135deg,#7c50f0,#00d2e6)';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22>🎭</text></svg>'">
             <div class="portfolio-data">
               <h3 class="portfolio-title">Playwright Test Automation Framework</h3>
@@ -741,7 +752,7 @@
 
           <!-- Project 2: KoyJabo (client) -->
           <div class="portfolio-content grid swiper-slide">
-            <img src="Assets/project/koyjabo.png" alt="KoyJabo Smart Transport Guide" class="portfolio-img"
+            <img loading="lazy" src="Assets/project/koyjabo.png" alt="KoyJabo Smart Transport Guide" class="portfolio-img"
                  onerror="this.style.background='linear-gradient(135deg,#f0a050,#f05090)';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22>🚌</text></svg>'">
             <div class="portfolio-data">
               <h3 class="portfolio-title">KoyJabo.com — Smart Transport Guide</h3>
@@ -756,7 +767,7 @@
 
           <!-- Project 3: Bugs Matrix Extension -->
           <div class="portfolio-content grid swiper-slide">
-            <img src="Assets/project/bugs_matrix.png" alt="Bugs Matrix SQA Testing Hub" class="portfolio-img"
+            <img loading="lazy" src="Assets/project/bugs_matrix.png" alt="Bugs Matrix SQA Testing Hub" class="portfolio-img"
                  onerror="this.style.background='linear-gradient(135deg,#50c0f0,#7c50f0)';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22>🐛</text></svg>'">
             <div class="portfolio-data">
               <h3 class="portfolio-title">Bugs Matrix — SQA Testing Tools Hub</h3>
@@ -770,7 +781,7 @@
 
           <!-- Project 4: XSS Recon -->
           <div class="portfolio-content grid swiper-slide">
-            <img src="Assets/project/xss_recon.png" alt="Fagun XSS Recon Security Tool" class="portfolio-img"
+            <img loading="lazy" src="Assets/project/xss_recon.png" alt="Fagun XSS Recon Security Tool" class="portfolio-img"
                  onerror="this.style.background='linear-gradient(135deg,#f05050,#f0a050)';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22>🔐</text></svg>'">
             <div class="portfolio-data">
               <h3 class="portfolio-title">Fagun XSS Recon</h3>
@@ -784,7 +795,7 @@
 
           <!-- Project 5: E-commerce QA (Freelance) -->
           <div class="portfolio-content grid swiper-slide">
-            <img src="Assets/project/ecom_qa.png" alt="E-Commerce QA Automation" class="portfolio-img"
+            <img loading="lazy" src="Assets/project/ecom_qa.png" alt="E-Commerce QA Automation" class="portfolio-img"
                  onerror="this.style.background='linear-gradient(135deg,#50f0a0,#50c0f0)';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22>🛒</text></svg>'">
             <div class="portfolio-data">
               <h3 class="portfolio-title">E-Commerce Platform — Full QA Automation</h3>
@@ -798,7 +809,7 @@
 
           <!-- Project 6: Fintech API Testing (Contract) -->
           <div class="portfolio-content grid swiper-slide">
-            <img src="Assets/project/fintech_api.png" alt="Fintech API Testing Contract" class="portfolio-img"
+            <img loading="lazy" src="Assets/project/fintech_api.png" alt="Fintech API Testing Contract" class="portfolio-img"
                  onerror="this.style.background='linear-gradient(135deg,#a050f0,#f05090)';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22>💳</text></svg>'">
             <div class="portfolio-data">
               <h3 class="portfolio-title">Fintech App — API &amp; Security Testing</h3>
@@ -812,7 +823,7 @@
 
           <!-- Project 7: SaaS Performance Testing (Freelance) -->
           <div class="portfolio-content grid swiper-slide">
-            <img src="Assets/project/saas_perf.png" alt="SaaS Performance Load Testing" class="portfolio-img"
+            <img loading="lazy" src="Assets/project/saas_perf.png" alt="SaaS Performance Load Testing" class="portfolio-img"
                  onerror="this.style.background='linear-gradient(135deg,#f0e050,#50f0a0)';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22>⚡</text></svg>'">
             <div class="portfolio-data">
               <h3 class="portfolio-title">SaaS Dashboard — Performance &amp; Load Testing</h3>
@@ -826,7 +837,7 @@
 
           <!-- Project 8: Mobile App QA (Client) -->
           <div class="portfolio-content grid swiper-slide">
-            <img src="Assets/project/mobile_qa.png" alt="Mobile App QA Testing" class="portfolio-img"
+            <img loading="lazy" src="Assets/project/mobile_qa.png" alt="Mobile App QA Testing" class="portfolio-img"
                  onerror="this.style.background='linear-gradient(135deg,#50c0f0,#f0a050)';this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><text x=%2250%%22 y=%2255%%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2240%22>📱</text></svg>'">
             <div class="portfolio-data">
               <h3 class="portfolio-title">Mobile App — iOS &amp; Android QA</h3>

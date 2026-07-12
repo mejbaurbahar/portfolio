@@ -1,3 +1,17 @@
+/*==================== PAGE LOADER ====================*/
+const pageLoader = document.getElementById('page-loader');
+
+// Hide loader once everything (fonts, images) is loaded
+window.addEventListener('load', () => {
+  // Small buffer so the progress bar animation completes visually
+  setTimeout(() => {
+    pageLoader.classList.add('hide');
+  }, 500);
+});
+
+// Safety: force-hide after 3.5s even if load never fires
+setTimeout(() => pageLoader && pageLoader.classList.add('hide'), 3500);
+
 /*==================== AOS INITIALIZATION ====================*/
 window.addEventListener('load', () => {
   AOS.init({ duration: 900, offset: 80, once: true });
