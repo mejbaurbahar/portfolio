@@ -314,7 +314,8 @@ body.dark-theme .active-link { background: rgba(120,80,240,0.18); }
 }
 .change-theme:hover { color: var(--clr-primary); background: rgba(120,80,240,0.09); }
 
-.nav-toggle, .nav-close, .nav-menu { display: none; }
+.nav-toggle, .nav-close { display: none; }
+.nav-menu { display: flex; align-items: center; }
 
 /* ============ HERO ============ */
 .home {
