@@ -72,7 +72,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, idx, isDark }) => 
                   src={getLogoSrc(exp.logoUrl)}
                   alt={`${exp.company} logo`}
                   className="w-full h-full object-contain"
-                  loading="lazy"
                   onError={(e) => {
                     (e.currentTarget as HTMLElement).style.display = 'none';
                   }}
