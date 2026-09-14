@@ -74,6 +74,27 @@ export const Hero: React.FC<HeroProps> = ({ isDark, onOpenResume, onOpenContact 
                 SQATesting.com
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
+              , and creator of{' '}
+              <a
+                href="https://github.com/mejbaurbahar/fagun"
+                target="_blank"
+                rel="noreferrer"
+                className="text-indigo-400 underline decoration-indigo-400/50 hover:decoration-indigo-400 font-medium inline-flex items-center gap-1"
+              >
+                Fagun MCP
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+              ,{' '}
+              <span className="text-purple-400 font-medium">Bug Matrix</span>, and{' '}
+              <a
+                href="https://koyjabo.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-emerald-400 underline decoration-emerald-400/50 hover:decoration-emerald-400 font-medium inline-flex items-center gap-1"
+              >
+                KoyJabo.com
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
               .
             </p>
 
@@ -135,7 +156,7 @@ export const Hero: React.FC<HeroProps> = ({ isDark, onOpenResume, onOpenContact 
             </div>
 
             {/* External Links & Profiles */}
-            <div className="pt-3 flex items-center gap-5 text-sm">
+            <div className="pt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm">
               <a
                 href={PERSONAL_INFO.github}
                 target="_blank"
@@ -150,10 +171,28 @@ export const Hero: React.FC<HeroProps> = ({ isDark, onOpenResume, onOpenContact 
                 href="https://sqatesting.com"
                 target="_blank"
                 rel="noreferrer"
+                className={`inline-flex items-center gap-1.5 transition-colors ${isDark ? 'text-slate-400 hover:text-cyan-400' : 'text-slate-600 hover:text-cyan-600'}`}
+              >
+                <Sparkles className="w-4 h-4 text-cyan-400" />
+                <span className="text-xs">sqatesting.com</span>
+              </a>
+              <span className="text-slate-600" aria-hidden="true">·</span>
+              <a
+                href="https://github.com/mejbaurbahar/fagun"
+                target="_blank"
+                rel="noreferrer"
+                className={`inline-flex items-center gap-1.5 transition-colors ${isDark ? 'text-slate-400 hover:text-indigo-400' : 'text-slate-600 hover:text-indigo-600'}`}
+              >
+                <span className="font-mono text-xs text-indigo-400">fagun-mcp</span>
+              </a>
+              <span className="text-slate-600" aria-hidden="true">·</span>
+              <a
+                href="https://koyjabo.com"
+                target="_blank"
+                rel="noreferrer"
                 className={`inline-flex items-center gap-1.5 transition-colors ${isDark ? 'text-slate-400 hover:text-emerald-400' : 'text-slate-600 hover:text-emerald-600'}`}
               >
-                <Sparkles className="w-4 h-4 text-emerald-400" />
-                <span className="text-xs">sqatesting.com</span>
+                <span className="font-mono text-xs text-emerald-400">koyjabo.com</span>
               </a>
               <span className="text-slate-600" aria-hidden="true">·</span>
               <button
@@ -231,15 +270,72 @@ export const Hero: React.FC<HeroProps> = ({ isDark, onOpenResume, onOpenContact 
                 </div>
               </div>
 
-              {/* Verified Founder Badge */}
-              <div className={`mt-3 p-2.5 rounded-xl border flex items-center justify-between text-xs ${
-                isDark ? 'bg-slate-950/40 border-slate-800/80 text-slate-300' : 'bg-slate-100/70 border-slate-200 text-slate-700'
-              }`}>
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-                  <span className="font-medium">Founder SQATesting.com</span>
+              {/* Flagship Creations Badges */}
+              <div className="mt-3 space-y-1.5">
+                <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider px-1">
+                  Creator & Founder
                 </div>
-                <span className="font-mono text-emerald-400 text-[11px]">50K+ Monthly Readers</span>
+                <div className="grid grid-cols-2 gap-2 text-xs">
+                  <a
+                    href="https://sqatesting.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`p-2 rounded-xl border transition-all flex items-center gap-2 ${
+                      isDark ? 'bg-slate-950/60 border-slate-800 hover:border-cyan-500/50 text-slate-300' : 'bg-slate-50 border-slate-200 hover:border-cyan-400 text-slate-700'
+                    }`}
+                  >
+                    <span className="w-2 h-2 rounded-full bg-cyan-400 shrink-0"></span>
+                    <div className="truncate">
+                      <div className="font-medium text-cyan-400 truncate">SQATesting.com</div>
+                      <div className="text-[10px] text-slate-400 font-mono">Founder · 50K+ QA</div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/mejbaurbahar/fagun"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`p-2 rounded-xl border transition-all flex items-center gap-2 ${
+                      isDark ? 'bg-slate-950/60 border-slate-800 hover:border-indigo-500/50 text-slate-300' : 'bg-slate-50 border-slate-200 hover:border-indigo-400 text-slate-700'
+                    }`}
+                  >
+                    <span className="w-2 h-2 rounded-full bg-indigo-400 shrink-0"></span>
+                    <div className="truncate">
+                      <div className="font-medium text-indigo-400 truncate">Fagun MCP</div>
+                      <div className="text-[10px] text-slate-400 font-mono">Creator · Agent QA</div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://chromewebstore.google.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`p-2 rounded-xl border transition-all flex items-center gap-2 ${
+                      isDark ? 'bg-slate-950/60 border-slate-800 hover:border-purple-500/50 text-slate-300' : 'bg-slate-50 border-slate-200 hover:border-purple-400 text-slate-700'
+                    }`}
+                  >
+                    <span className="w-2 h-2 rounded-full bg-purple-400 shrink-0"></span>
+                    <div className="truncate">
+                      <div className="font-medium text-purple-400 truncate">Bug Matrix</div>
+                      <div className="text-[10px] text-slate-400 font-mono">Creator · Extension</div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://koyjabo.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`p-2 rounded-xl border transition-all flex items-center gap-2 ${
+                      isDark ? 'bg-slate-950/60 border-slate-800 hover:border-emerald-500/50 text-slate-300' : 'bg-slate-50 border-slate-200 hover:border-emerald-400 text-slate-700'
+                    }`}
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span>
+                    <div className="truncate">
+                      <div className="font-medium text-emerald-400 truncate">KoyJabo.com</div>
+                      <div className="text-[10px] text-slate-400 font-mono">Creator · Transit</div>
+                    </div>
+                  </a>
+                </div>
               </div>
 
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Users, BookOpen, Chrome, ExternalLink, ArrowUpRight, Sparkles } from 'lucide-react';
+import { Globe, Users, BookOpen, Chrome, ExternalLink, ArrowUpRight, Sparkles, Github } from 'lucide-react';
 import { SQATESTING_PLATFORM } from '../data/portfolioData';
 
 interface SqaPlatformSectionProps {
@@ -83,6 +83,18 @@ export const SqaPlatformSection: React.FC<SqaPlatformSectionProps> = ({ isDark }
                 </a>
 
                 <a
+                  href="https://github.com/mejbaurbahar/fagun"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm border transition-colors ${
+                    isDark ? 'border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-slate-200' : 'border-slate-300 bg-white hover:bg-slate-100 text-slate-800'
+                  }`}
+                >
+                  <Github className="w-4 h-4 text-indigo-400" />
+                  <span>Fagun MCP (GitHub)</span>
+                </a>
+
+                <a
                   href="https://chromewebstore.google.com"
                   target="_blank"
                   rel="noreferrer"
@@ -91,7 +103,19 @@ export const SqaPlatformSection: React.FC<SqaPlatformSectionProps> = ({ isDark }
                   }`}
                 >
                   <Chrome className="w-4 h-4 text-cyan-400" />
-                  <span>Get Bug Matrix Extension</span>
+                  <span>Bug Matrix</span>
+                </a>
+
+                <a
+                  href="https://koyjabo.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm border transition-colors ${
+                    isDark ? 'border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-slate-200' : 'border-slate-300 bg-white hover:bg-slate-100 text-slate-800'
+                  }`}
+                >
+                  <Globe className="w-4 h-4 text-emerald-400" />
+                  <span>KoyJabo.com</span>
                 </a>
               </div>
             </div>

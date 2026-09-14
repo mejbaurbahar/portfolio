@@ -4,8 +4,8 @@ export const PERSONAL_INFO = {
   name: 'Mejbaur Bahar Fagun',
   shortName: 'Fagun',
   title: 'Senior Software QA Engineer & Cybersecurity Expert',
-  subtitle: 'Senior Software Engineer - QA · SDET Lead · Certified Ethical Hacker (CEH)',
-  bio: 'Senior Quality Assurance Engineer and Certified Ethical Hacker with over 6 years of experience architecting enterprise test automation frameworks (Playwright, Cypress, Selenium), offensive AppSec testing (OWASP Top 10, XSS, API security), and AI/ML model quality validation. Passionate about shift-left engineering and zero-defect deployments.',
+  subtitle: 'Senior Software Engineer - QA · Creator of Fagun MCP, Bug Matrix, KoyJabo.com & Founder of SQATesting.com',
+  bio: 'Senior Quality Assurance Engineer and Certified Ethical Hacker (CEH) with over 6 years of experience architecting enterprise test automation frameworks (Playwright, Cypress, Selenium), offensive AppSec testing (OWASP Top 10, XSS, API security), and AI/ML model quality validation. Creator of Fagun MCP (autonomous browser QA engine), Bug Matrix, KoyJabo.com, and founder of SQATesting.com.',
   email: 'fagun115946@gmail.com',
   phone: '+8801316314566',
   location: 'Jeddah, Saudi Arabia · Remote Worldwide',
@@ -20,6 +20,83 @@ export const PERSONAL_INFO = {
 };
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'fagun-mcp',
+    title: 'Fagun 🦊 – Autonomous Browser QA & Bug Hunting Engine (MCP)',
+    category: 'automation',
+    categoryLabel: 'AI Agent QA & MCP Server',
+    shortDescription: 'One MCP server that gives any AI tool a real browser to click, crawl, and find real bugs — backed by reproducible evidence.',
+    fullDescription: 'Fagun is an open-source Model Context Protocol (MCP) server that plugs into Claude, Cursor, Windsurf, Cline, Antigravity, or VS Code. Once connected, AI agents can open a live browser, emulate real user behaviors (device, network, accessibility), execute deep end-to-end user journeys, and discover functional, security, performance, and accessibility bugs with zero hallucinations.',
+    architectureDetails: [
+      'Universal MCP tool interface compatible with all major AI coding agents',
+      'Autonomous browser orchestration with real-time CDP trace recording',
+      'Zero-hallucination verification engine requiring reproducible steps for all bug reports',
+      'Automated accessibility (a11y), security header, and console error monitors',
+      'Multi-device viewport, touch gesture, and network throttling emulation'
+    ],
+    features: [
+      'Autonomous exploratory and regression testing driven by LLM agents',
+      'Full evidence collection: DOM snapshots, step screenshots, and network Har files',
+      'Instant bug reports generated in standard Markdown and Jira formats',
+      'Works with local development servers and live staging environments'
+    ],
+    metrics: [
+      { label: 'Compatible Agents', value: 'Claude, Cursor, Windsurf, Antigravity' },
+      { label: 'Bug Detection Accuracy', value: '100% Evidence-Backed' },
+      { label: 'Setup Time', value: '< 2 minutes' }
+    ],
+    tags: ['MCP Server', 'TypeScript', 'Playwright', 'AI Agent Testing', 'Autonomous QA', 'Open Source'],
+    githubUrl: 'https://github.com/mejbaurbahar/fagun',
+    demoUrl: 'https://github.com/mejbaurbahar/fagun',
+    featured: true,
+    colorScheme: 'cyan',
+    codeSnippet: {
+      language: 'typescript',
+      filename: 'mcp-server/src/index.ts',
+      code: `import { Server } from "@modelcontextprotocol/sdk/server/index.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { chromium } from "playwright";
+
+// Fagun Autonomous Browser QA Tool Registration
+server.setRequestHandler(CallToolRequestSchema, async (request) => {
+  if (request.params.name === "fagun_navigate_and_audit") {
+    const page = await browser.newPage();
+    await page.goto(request.params.arguments.url, { waitUntil: "networkidle" });
+    const audit = await runComprehensiveAudit(page);
+    return { content: [{ type: "text", text: JSON.stringify(audit, null, 2) }] };
+  }
+});`
+    }
+  },
+  {
+    id: 'koyjabo-platform',
+    title: 'Koy Jabo 🚌 – Bangladesh Smart Mobility & Route Discovery',
+    category: 'tools',
+    categoryLabel: 'Smart Transit Platform',
+    shortDescription: 'Nationwide public transit route finder and navigation platform mapping bus, metro rail, train, launch, and flight routes for 170M+ citizens.',
+    fullDescription: 'Founded and developed KoyJabo.com to solve Bangladesh transit uncertainty. Provides intelligent route search, bus stop mapping, fare estimates, and multi-modal transit options across all 64 districts.',
+    architectureDetails: [
+      'Comprehensive graph routing engine calculating multi-modal transit transfers',
+      'Ultra-lightweight PWA designed for 3G/4G mobile networks across Bangladesh',
+      'Crowdsourced transit updates and real-time station stop listings'
+    ],
+    features: [
+      'Dhaka local bus route finder with station-to-station navigation',
+      'Bangladesh Railway intercity train schedules and fare charts',
+      'Dhaka Metro Rail (MRT Line 6) timetable and station gates',
+      'River launch schedules and domestic flight connections'
+    ],
+    metrics: [
+      { label: 'Coverage', value: '64 Districts Nationwide' },
+      { label: 'Transit Modes', value: 'Bus, Metro, Train, Launch, Flight' },
+      { label: 'Platform Price', value: '100% Free Forever' }
+    ],
+    tags: ['Next.js', 'React', 'TypeScript', 'PWA', 'GIS Routing', 'Full-Stack'],
+    githubUrl: 'https://github.com/mejbaurbahar',
+    demoUrl: 'https://koyjabo.com',
+    featured: true,
+    colorScheme: 'emerald'
+  },
   {
     id: 'fagun-playwright-framework',
     title: 'Fagun Playwright Enterprise Test Automation Framework',
@@ -296,83 +373,118 @@ class FagunXSSRecon:
 export const EXPERIENCES: Experience[] = [
   {
     id: 'sofof-tech',
-    role: 'Senior Software Engineer QA',
+    role: 'Senior SQA Engineer & Product Manager (LLM/TTS)',
     company: 'SOFOF Tech',
+    logoUrl: 'Assets/logos/sofof.png',
     period: 'Sep 2026 - Present',
-    location: 'Jeddah, Saudi Arabia',
+    location: 'Jeddah, Saudi Arabia · Remote',
     type: 'Full-Time',
     highlights: [
-      'Lead Quality Assurance strategies, enterprise automation frameworks, and end-to-end testing for core software products.',
-      'Establish robust CI/CD quality gates, automated regression pipelines, and performance baselines.',
-      'Collaborate with cross-functional development and product teams to enforce zero-defect quality standards across releases.',
-      'Drive test optimization, shift-left QA practices, and security compliance audits across sprint deliverables.'
+      'Lead functional, performance, and security testing for LLM and TTS models, evaluating output accuracy, latency, and reliability.',
+      'Assigned as Product Manager for the LLM/TTS project, overseeing product roadmap, cross-functional engineering coordination, and delivery milestones.',
+      'Architect scalable, automated test frameworks for web, mobile, and API testing integrated into CI/CD pipelines.',
+      'Implement AI-driven test automation tools for intelligent test case generation, self-healing scripts, and predictive defect analysis.'
     ],
-    skills: ['Playwright', 'Test Automation', 'CI/CD', 'API Testing', 'Security Testing', 'Performance'],
+    skills: ['Playwright', 'LLM / TTS QA', 'CI/CD Pipelines', 'API Testing', 'AppSec', 'Product Management'],
     color: 'cyan'
   },
   {
-    id: 'markopolo',
-    role: 'Senior Software Engineer QA / SDET',
-    company: 'Markopolo.ai',
-    period: 'Nov 2025 - Sep 2026',
-    location: 'Dhaka / Remote',
-    type: 'Full-Time',
+    id: 'koyjabo',
+    role: 'Founder & Technical Lead',
+    company: 'Koy Jabo (koyjabo.com)',
+    logoUrl: 'Assets/logos/koyjabo.png',
+    period: 'Dec 2025 - Present',
+    location: 'Dhaka, Bangladesh · Remote',
+    type: 'Founder / Venture',
     highlights: [
-      'Spearheaded the complete quality assurance strategy for an AI-powered growth marketing platform used by global enterprise brands.',
-      'Designed and deployed an end-to-end Playwright + TypeScript test suite, accelerating regression cycles from 3 days to under 45 minutes.',
-      'Constructed specialized test harnesses for validating generative AI models, catching hallucinated ad variations and adversarial prompt injection attempts.',
-      'Implemented automated API security scanning in GitHub Actions CI/CD pipelines, enforcing OWASP Top 10 compliance on every pull request.',
-      'Mentored junior and mid-level QA engineers in modern test automation architecture, Page Object Models, and continuous testing.'
+      'Founded and architected KoyJabo.com — a nationwide transport discovery and smart route-finding platform for Bangladesh.',
+      'Engineered multi-modal route navigation covering local buses, Metro Rail, trains, launches, and domestic flights for 170M+ citizens.',
+      'Sole technical founder directing full-stack development, GIS routing data, mobile apps, and scalable web infrastructure.'
     ],
-    skills: ['Playwright', 'TypeScript', 'AI/ML Testing', 'GitHub Actions', 'OWASP', 'Docker', 'Postman'],
-    color: 'purple'
-  },
-  {
-    id: 'dev-experience-hub',
-    role: 'Senior QA Engineer & Security Lead',
-    company: 'Developer Experience Hub',
-    period: '2021 - 2023',
-    location: 'Remote',
-    type: 'Full-Time',
-    highlights: [
-      'Architected cross-browser automation frameworks using Cypress and WebdriverIO across responsive desktop and mobile web applications.',
-      'Conducted bi-weekly vulnerability assessments, penetration testing, and security code reviews, identifying and remediating 25+ critical flaws.',
-      'Implemented distributed performance testing with k6, establishing latency baselines and SLAs for microservice APIs.',
-      'Reduced production defect leakage by 42% through shift-left testing practices and mandatory automation coverage gates.'
-    ],
-    skills: ['Cypress', 'Penetration Testing', 'k6 Performance', 'WebdriverIO', 'Burp Suite', 'REST API'],
-    color: 'purple'
-  },
-  {
-    id: 'sqatesting',
-    role: 'Founder & Principal SQA Architect',
-    company: 'SQATesting.com',
-    period: '2020 - Present',
-    location: 'Global Platform',
-    type: 'Founder / Community Lead',
-    highlights: [
-      'Founded SQATesting.com, a premier educational platform providing testing frameworks, tool reviews, and certification guidance to 50,000+ engineers monthly.',
-      'Published two successful browser extensions on the Chrome Web Store: "Bug Matrix" and "Click \'n Test".',
-      'Authored open-source framework templates adopted by engineering teams globally for Playwright and Cypress.',
-      'Delivered workshops and talks on test automation best practices, ethical hacking for testers, and AI-driven quality engineering.'
-    ],
-    skills: ['Community Leadership', 'Framework Architecture', 'Technical Writing', 'Open Source', 'Dev Tools'],
+    skills: ['Product Architecture', 'Full-Stack', 'GIS Routing', 'React', 'Mobile Apps', 'Startup Leadership'],
     color: 'emerald'
   },
   {
-    id: 'early-qa',
-    role: 'Software QA Engineer',
-    company: 'Fintech & Enterprise Tech Solutions',
-    period: '2019 - 2021',
-    location: 'Dhaka',
+    id: 'bugmatrix',
+    role: 'Founder & Creator',
+    company: 'Bug Matrix & SQATesting.com',
+    logoUrl: 'Assets/logos/bugmatrix.png',
+    period: 'Oct 2024 - Present',
+    location: 'Global Platform · Chrome Web Store',
+    type: 'Founder / Product',
+    highlights: [
+      'Created and published "Bug Matrix" and "Click \'n Test" on Chrome Web Store, trusted by 5,000+ QA engineers worldwide.',
+      'Provides one-click responsive device presets, simulated network throttling, instant DOM element bounding boxes, and one-click export to JIRA & GitHub.',
+      'Founded SQATesting.com, educating 50,000+ monthly QA engineers with open-source test frameworks and certification guides.'
+    ],
+    skills: ['Chrome Extensions', 'Manifest V3', 'DevTools Protocol', 'Productivity Tools', 'Community Leadership'],
+    color: 'purple'
+  },
+  {
+    id: 'markopolo',
+    role: 'Senior Software Engineer QA (L4)',
+    company: 'Markopolo AI INC',
+    logoUrl: 'Assets/logos/markopolo.png',
+    period: 'Nov 2025 - Sep 2026 · 11 mos',
+    location: 'Dhaka, Bangladesh · Remote',
     type: 'Full-Time',
     highlights: [
-      'Performed comprehensive functional, regression, and database testing for mission-critical financial transaction systems.',
-      'Automated core banking user journeys using Selenium WebDriver with Java and TestNG.',
-      'Authored detailed test plans, traceability matrices, and ISTQB-compliant test cases ensuring 100% requirement coverage.'
+      'Led QA for AI-driven TTS and NLP models; built 200+ automated evaluation tests covering model accuracy, prosody, and prompt injection resistance.',
+      'Architected Playwright + Python test framework integrated with GitHub Actions CI/CD; reduced regression cycle from 4 hours to 45 minutes (81% faster).',
+      'Managed 8-engineer QA team; defined OKRs, test coverage targets, and quality gates achieving 20% reduction in production defect leakage.',
+      'Designed AI/ML testing protocols covering model output validation, bias detection, adversarial input testing, and LLM security evaluation.'
     ],
-    skills: ['Selenium WebDriver', 'Java', 'SQL Testing', 'ISTQB', 'JIRA', 'Postman'],
+    skills: ['Playwright', 'Python', 'AI/ML Testing', 'LLM Guardrails', 'GitHub Actions', 'Team Leadership'],
+    color: 'cyan'
+  },
+  {
+    id: 'dev-experience-hub',
+    role: 'Software Engineer in Test (L2)',
+    company: 'Developer eXperience Hub (DEVxHUB)',
+    logoUrl: 'Assets/logos/devxhub.png',
+    period: 'Mar 2022 - Oct 2025 · 3 yrs 8 mos',
+    location: 'Rajshahi, Bangladesh · Remote',
+    type: 'Full-Time',
+    highlights: [
+      'Built automated test suites covering functional, API, performance, and security testing across 3 microservices using Playwright and Python.',
+      'Integrated OWASP ZAP and Burp Suite into CI/CD pipeline; identified 15+ critical vulnerabilities before production release.',
+      'Grew automated test coverage from 60% to 85%, eliminating 40% of manual regression effort per sprint.',
+      'Promoted across 3 tiers: QA Intern (Mar 2022) → Jr Software QA Engineer (Aug 2022) → Software Engineer in Test L2 (Aug 2023).'
+    ],
+    skills: ['Playwright', 'Cypress', 'OWASP ZAP', 'Burp Suite', 'Python', 'k6 Performance', 'REST API'],
+    color: 'emerald'
+  },
+  {
+    id: 'gaotek',
+    role: 'Software Testing Engineer',
+    company: 'GAO Tek Inc.',
+    logoUrl: 'Assets/logos/gaotek.png',
+    period: 'Dec 2021 - Feb 2022 · 3 mos',
+    location: 'New York, US · Remote',
+    type: 'Contract',
+    highlights: [
+      'Conducted comprehensive functional, regression, and system testing for global commercial software suites.',
+      'Authored structured test cases, traceability matrices, and defect reports across distributed international agile teams.',
+      'Collaborated directly with development teams to verify edge cases and resolve defects ahead of client deliveries.'
+    ],
+    skills: ['Functional Testing', 'Regression Testing', 'Test Case Design', 'JIRA', 'Agile/Scrum'],
     color: 'amber'
+  },
+  {
+    id: 'orion',
+    role: 'Software Testing Specialist (Mobile Apps & Payments)',
+    company: 'Orion Informatics Ltd',
+    logoUrl: 'Assets/logos/orion.png',
+    period: 'May 2021 - Jul 2021 · 3 mos',
+    location: 'Dhaka, Bangladesh',
+    type: 'Contract',
+    highlights: [
+      'Tested Android and iOS payment gateway flows including authentication, transaction processing, refund, and error-handling scenarios.',
+      'Validated security of mobile payment flows covering encryption checks, session management, and PCI DSS-relevant test scenarios.',
+      'Ensured cross-device mobile compatibility and verified backend transaction reconciliation.'
+    ],
+    skills: ['Mobile Testing', 'Payment Gateways', 'Transaction Security', 'Android/iOS', 'PCI DSS'],
+    color: 'purple'
   }
 ];
 

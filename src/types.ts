@@ -24,6 +24,7 @@ export interface Experience {
   id: string;
   role: string;
   company: string;
+  logoUrl?: string;
   period: string;
   location: string;
   type: string;
