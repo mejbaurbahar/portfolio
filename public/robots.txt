@@ -1,22 +1,74 @@
+# Robots.txt for https://fagun.sqatesting.com/
+# Portfolio of Mejbaur Bahar Fagun - Senior SDET & Ethical Hacker
+
 User-agent: *
 Allow: /
+Allow: /MEJBAUR_BAHAR_Senior_SDET_Resume.pdf
+Allow: /resume.pdf
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /sitemap.xml
 
+# Search Engine Crawlers (SEO)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Generative AI & Answer Engine Crawlers (AEO & GEO)
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
+User-agent: Claude-Web
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Bytespider
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
 Allow: /
 
 Sitemap: https://fagun.sqatesting.com/sitemap.xml

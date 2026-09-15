@@ -9,53 +9,18 @@ interface ResumeModalProps {
 }
 
 export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, isDark, onClose }) => {
-  const [downloading, setDownloading] = useState(false);
-
   if (!isOpen) return null;
 
+  const pdfUrl = `${import.meta.env.BASE_URL || './'}MEJBAUR_BAHAR_Senior_SDET_Resume.pdf`;
+
   const handlePrint = () => {
-    window.print();
-  };
-
-  const handleSimulateDownload = () => {
-    setDownloading(true);
-    setTimeout(() => {
-      // Create a markdown / text resume file for download
-      const resumeContent = `
-# ${PERSONAL_INFO.name}
-${PERSONAL_INFO.title}
-Email: ${PERSONAL_INFO.email} | Location: ${PERSONAL_INFO.location}
-Website: https://sqatesting.com | GitHub: ${PERSONAL_INFO.github}
-
-## SUMMARY
-${PERSONAL_INFO.bio}
-
-## KEY CERTIFICATIONS
-${CERTIFICATIONS.map(c => `- ${c.name} (${c.issuer}) - ID: ${c.credentialId}`).join('\n')}
-
-## PROFESSIONAL EXPERIENCE
-${EXPERIENCES.map(e => `
-### ${e.role} — ${e.company} (${e.period})
-Location: ${e.location} | Type: ${e.type}
-${e.highlights.map(h => `- ${h}`).join('\n')}
-Toolchain: ${e.skills.join(', ')}
-`).join('\n')}
-
-## CORE COMPETENCIES
-${SKILL_CATEGORIES.map(c => `- ${c.title}: ${c.skills.map(s => s.name).join(', ')}`).join('\n')}
-      `.trim();
-
-      const blob = new Blob([resumeContent], { type: 'text/markdown;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `Mejbaur_Bahar_Fagun_Senior_QA_Cybersecurity_Resume.md`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      setDownloading(false);
-    }, 600);
+    // Open original PDF directly for high-resolution print
+    const printWindow = window.open(pdfUrl, '_blank');
+    if (printWindow) {
+      printWindow.focus();
+    } else {
+      window.print();
+    }
   };
 
   return (
@@ -83,19 +48,19 @@ ${SKILL_CATEGORIES.map(c => `- ${c.title}: ${c.skills.map(s => s.name).join(', '
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className={`p-2 rounded-lg border text-xs font-medium flex items-center gap-1.5 transition-colors ${
+              className={`p-2 rounded-lg border text-xs font-medium flex items-center gap-1.5 transition-colors cursor-pointer ${
                 isDark ? 'border-slate-700 bg-slate-800 text-slate-200 hover:bg-slate-700' : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-100'
               }`}
-              title="Print Resume"
+              title="Print Original PDF Resume"
             >
-              <Printer className="w-4 h-4" />
-              <span className="hidden sm:inline">Print</span>
+              <Printer className="w-4 h-4 text-cyan-400" />
+              <span className="hidden sm:inline">Print Resume</span>
             </button>
 
             <a
-              href="Assets/Mejbaur-Bahar-SDET-Resume.pdf"
-              download="Mejbaur-Bahar-Fagun-QA-Resume.pdf"
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 flex items-center gap-1.5 shadow-sm"
+              href={pdfUrl}
+              download="MEJBAUR_BAHAR_Senior_SDET_Resume.pdf"
+              className="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
               title="Download Original PDF Resume"
             >
               <Download className="w-4 h-4" />
@@ -103,17 +68,9 @@ ${SKILL_CATEGORIES.map(c => `- ${c.title}: ${c.skills.map(s => s.name).join(', '
             </a>
 
             <button
-              onClick={handleSimulateDownload}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 flex items-center gap-1.5 shadow-sm"
-            >
-              <Download className="w-4 h-4" />
-              <span>{downloading ? 'Exporting...' : 'Export Markdown'}</span>
-            </button>
-
-            <button
               onClick={onClose}
               aria-label="Close modal"
-              className={`p-1.5 rounded-lg transition-colors ${
+              className={`p-1.5 rounded-lg transition-colors cursor-pointer ${
                 isDark ? 'text-slate-400 hover:text-white' : 'text-slate-500 hover:text-black'
               }`}
             >

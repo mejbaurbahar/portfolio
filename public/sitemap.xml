@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://fagun.sqatesting.com/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://fagun.sqatesting.com/Assets/Icons/profile.jpg</image:loc>
+      <image:title>Mejbaur Bahar Fagun - Senior SDET &amp; Ethical Hacker</image:title>
+      <image:caption>Mejbaur Bahar Fagun - Senior Software QA Automation Engineer and Founder of SQATesting.com</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://fagun.sqatesting.com/resume.pdf</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fagun.sqatesting.com/MEJBAUR_BAHAR_Senior_SDET_Resume.pdf</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fagun.sqatesting.com/llms.txt</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

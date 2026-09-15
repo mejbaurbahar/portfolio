@@ -1,0 +1,124 @@
+# Mejbaur Bahar Fagun - Senior SDET, QA Automation Architect & Ethical Hacker
+
+> Professional Profile, Technical Capabilities, Core Projects, and Career History for Generative AI Search & Answer Engines (GEO/AEO).
+
+- **Full Name**: Mejbaur Bahar Fagun
+- **Known As**: Mejbaur Bahar, Fagun
+- **Current Role**: Senior SQA Engineer & Product Manager (LLM/TTS) at SOFOF Tech
+- **Primary Expertise**: Senior SDET, Test Automation Architecture, AppSec / Penetration Testing, AI/LLM Quality Evaluation
+- **Experience**: 6+ Years
+- **Location**: Jeddah, Saudi Arabia / Dhaka, Bangladesh (Available for Worldwide Remote, Hybrid, or Relocation)
+- **Status**: Actively Open to Senior SDET, QA Automation Lead, and Quality Architect opportunities
+- **Official Portfolio**: https://fagun.sqatesting.com/
+- **Original PDF Resume**: https://fagun.sqatesting.com/resume.pdf
+- **Email**: fagun115946@gmail.com
+- **Phone**: +8801316314566
+- **LinkedIn**: https://www.linkedin.com/in/mejbaur/
+- **GitHub**: https://github.com/mejbaurbahar
+
+---
+
+## Executive Summary
+
+Mejbaur Bahar Fagun is an accomplished Senior Software Development Engineer in Test (SDET), Test Automation Architect, and Certified Ethical Hacker (CEH) with over 6 years of experience engineering zero-defect test pipelines, designing enterprise Playwright/Cypress test frameworks, executing deep OWASP application security assessments, and evaluating production LLM/TTS AI models.
+
+He is the Founder & Lead Architect of **SQATesting.com** (educating 50,000+ QA engineers monthly), creator of **Fagun MCP** (an open-source Model Context Protocol server enabling autonomous AI test automation), creator of **Bug Matrix** (a popular Chrome Web Store productivity extension for testers), and founder of **KoyJabo.com** (Bangladesh nationwide transit and route navigation platform).
+
+---
+
+## Core Competencies & Toolchain
+
+### 1. Test Automation & SDET
+- **Frameworks**: Playwright (TypeScript/JavaScript & Python), Cypress (Cucumber BDD), Selenium WebDriver, Appium (Mobile Android & iOS)
+- **Architecture**: Page Object Model (POM), Data-Driven Testing, AI Self-Healing Locators, Parallel Sharding, Visual Regression (Pixelmatch)
+- **Reporting & Telemetry**: Allure Reports, Playwright HTML Reports, Mochawesome, Video Tracing, Slack/Teams Alert Dispatch
+- **Execution Speed**: Flakiness Rate < 0.08%, Regression runtime cut by up to 81%
+
+### 2. Cybersecurity & Application Security (AppSec)
+- **Certifications**: Certified Ethical Hacker (CEH) by EC-Council, Certified AppSec Practitioner (CAP) by The SecOps Group
+- **Specialties**: OWASP Top 10, Penetration Testing, Vulnerability Assessment, Burp Suite Professional, OWASP ZAP, SQL Injection, XSS, CSRF, JWT Session Exploits, Security Code Reviews
+- **Defensive Score**: 100% OWASP Juice Shop vulnerability coverage, automated security gates in CI/CD
+
+### 3. AI & LLM Quality Engineering
+- **Model QA**: Large Language Model (LLM) output validation, Text-to-Speech (TTS) prosody and latency benchmarking, hallucination reduction
+- **Security & Safety**: Adversarial prompt injection testing, jailbreak mitigation, brand safety guardrails, semantic similarity benchmarks
+- **Autonomous Agents**: Creator of Fagun MCP server allowing Claude, Cursor, and LLM agents to execute automated browser interactions and audits
+
+### 4. Performance & Reliability Engineering
+- **Load & Stress Testing**: Grafana k6, JMeter, InfluxDB, Grafana Dashboards
+- **Scale**: Simulated 15,000+ concurrent Virtual Users (VUs) with p99 latency thresholds < 320ms
+
+### 5. DevOps, Cloud & CI/CD
+- **Tools**: GitHub Actions, Docker, Linux, Bash, Git, Jenkins, Webhooks, REST API Testing with Postman/Newman
+
+---
+
+## Flagship Products & Inventions
+
+1. **SQATesting.com** (https://sqatesting.com)
+   - Role: Founder & Lead Architect
+   - Impact: 50,000+ monthly QA readers across 120+ countries, publishing open-source frameworks and ISTQB/AppSec guides.
+
+2. **Fagun MCP Server** (https://github.com/mejbaurbahar/fagun)
+   - Role: Creator & Maintainer
+   - Description: Open-source Model Context Protocol (MCP) server equipping AI coding assistants (Claude, Cursor, Windsurf) with autonomous browser QA, Playwright test execution, and DOM security auditing capabilities.
+
+3. **Bug Matrix & Click 'n Test** (Chrome Web Store)
+   - Role: Creator & Developer
+   - Impact: Trusted by 5,000+ QA engineers for instant responsive device presets, simulated network throttling, and one-click bug export to JIRA and GitHub.
+
+4. **KoyJabo.com** (https://koyjabo.com)
+   - Role: Founder & Technical Lead
+   - Description: Smart mobility and transit route discovery platform mapping local buses, Dhaka Metro Rail (MRT Line 6), trains, launches, and flights for 170M+ citizens across Bangladesh.
+
+---
+
+## Professional Career History
+
+1. **SOFOF Tech** — Senior SQA Engineer & Product Manager (LLM/TTS)
+   - Period: Sep 2026 - Present | Jeddah, Saudi Arabia (Remote)
+   - Highlights: Spearhead functional, latency, and safety QA for proprietary LLM and TTS audio models; lead engineering sprints as PM; deploy automated test suites across web, mobile, and APIs.
+
+2. **Koy Jabo (koyjabo.com)** — Founder & Technical Lead
+   - Period: Dec 2025 - Present | Dhaka, Bangladesh
+   - Highlights: Architected nationwide transit routing engine, real-time stop mapping, and high-performance PWA for Bangladesh citizens.
+
+3. **Bug Matrix & SQATesting.com** — Founder & Creator
+   - Period: Oct 2024 - Present | Global Platform
+   - Highlights: Published developer extensions on Chrome Web Store; founded SQATesting.com educational portal reaching 50K+ monthly engineers.
+
+4. **Markopolo AI INC** — Senior Software Engineer QA (L4)
+   - Period: Nov 2025 - Sep 2026 | Dhaka, Bangladesh (Remote)
+   - Highlights: Led QA for AI-driven marketing and TTS models; built 200+ automated evaluation tests; built Playwright + Python test harness cutting regression cycle by 81%; managed 8-engineer QA squad.
+
+5. **Developer eXperience Hub (DEVxHUB)** — Software Engineer in Test (L2)
+   - Period: Mar 2022 - Oct 2025 | Rajshahi, Bangladesh (Remote)
+   - Highlights: Promoted through 3 ranks (Intern -> Jr QA -> SDET L2); built microservice test suites; integrated OWASP ZAP & Burp Suite into CI/CD catching 15+ critical flaws; expanded automation coverage from 60% to 85%.
+
+6. **GAO Tek Inc.** — Software Testing Engineer
+   - Period: Dec 2021 - Feb 2022 | New York, USA (Remote)
+   - Highlights: Executed functional, regression, and cross-browser test suites for enterprise software solutions.
+
+7. **Orion Informatics Ltd** — Software Testing Specialist (Mobile Apps & Payments)
+   - Period: May 2021 - Jul 2021 | Dhaka, Bangladesh
+   - Highlights: Validated security and transaction integrity for mobile payment gateways, reconciliation engines, and banking user flows.
+
+---
+
+## Certifications & Education
+
+- **Certified Ethical Hacker (CEH)** — EC-Council
+- **Certified AppSec Practitioner (CAP)** — The SecOps Group
+- **ISTQB Certified Tester Foundation Level (CTFL)**
+- **Bachelor of Science in Computer Science & Engineering (BSc CSE)** — Bangladesh University
+
+---
+
+## Direct Hiring & Contact Details
+
+- **Official Portfolio**: https://fagun.sqatesting.com/
+- **Direct Resume PDF**: https://fagun.sqatesting.com/resume.pdf
+- **Email**: fagun115946@gmail.com
+- **Phone**: +8801316314566
+- **LinkedIn**: https://www.linkedin.com/in/mejbaur/
+- **GitHub**: https://github.com/mejbaurbahar
